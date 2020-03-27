@@ -1,0 +1,17 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated {{ bar }}" role="progressbar" [style.width.%]="val" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ val }}%</div>
+              </div>
+        </div>
+    
+    <div class="col-md-4 mt-3">
+        <button class="btn btn-success" (click)="clk(1)">Increase</button>
+    </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4 mt-3"><button class="btn btn-danger" (click)="clk(2)">Decrease</button></div>
+    </div>
+</div>
+
+

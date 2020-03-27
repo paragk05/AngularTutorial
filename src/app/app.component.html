@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-process-bar [process]="ev"></app-process-bar>
+    </div>
+    <div class="col-md-12">
+
+      <app-process-btn (btnClick)="onBtn($event)"></app-process-btn>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
