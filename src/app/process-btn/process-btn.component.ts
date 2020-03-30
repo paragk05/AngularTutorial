@@ -10,6 +10,7 @@ import { HomeService } from '../home.service';
 export class ProcessBtnComponent implements OnInit {
 
   pro = 0
+  alert= ''
 
   constructor(private bar : HomeService) { }
 
@@ -25,13 +26,16 @@ export class ProcessBtnComponent implements OnInit {
     if(num===1)
     {
       this.pro=this.bar.inc(this.pro);
+      this.alert='bg-success'
     }
     else if(num===2)
     {
       this.pro=this.bar.dec(this.pro)
+      this.alert='bg-danger'
     }
     let ev : BtnEv ={
-      pro:this.pro
+      pro:this.pro,
+      alert: this.alert
     }
     this.btnClick.emit(ev)
   }
@@ -41,5 +45,6 @@ export class ProcessBtnComponent implements OnInit {
 
 export interface BtnEv{
   
-  pro : number
+  pro : number,
+  alert : String
 }
